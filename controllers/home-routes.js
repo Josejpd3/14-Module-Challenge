@@ -60,3 +60,12 @@ router.get('/post/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
       }
 });
+
+router.get('/login', async (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
