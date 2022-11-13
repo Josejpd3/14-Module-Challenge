@@ -13,3 +13,5 @@ const signup = async (e) => {
         response.ok ? document.location.replace('/') : alert(response.statusText)
     }
 };
+
+document.querySelector('.signupForm').addEventListener('submit', signup);
