@@ -5,3 +5,5 @@ const logout = async () => {
     });
     response.ok ? document.location.replace('/') : alert('Could not log out. Try Again');
   };
+  
+  document.querySelector('#logout').addEventListener('click', logout);
