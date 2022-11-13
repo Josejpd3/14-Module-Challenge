@@ -4,10 +4,11 @@ const login = async (e) => {
     const password = document.querySelector('#loginPassword').value.trim();
 
     if (email && password) {
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/user/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
+        response.ok ? document.location.replace('/') : alert(response.statusText)
     }
 };
