@@ -12,3 +12,4 @@ const login = async (e) => {
         response.ok ? document.location.replace('/') : alert(response.statusText)
     }
 };
+document.querySelector('.loginForm').addEventListener('submit', login);
