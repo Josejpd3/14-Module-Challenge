@@ -3,4 +3,5 @@ const logout = async () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
+    response.ok ? document.location.replace('/') : alert('Could not log out. Try Again');
   };
