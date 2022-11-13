@@ -10,5 +10,6 @@ const signup = async (e) => {
             body: JSON.stringify({ username, email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
+        response.ok ? document.location.replace('/') : alert(response.statusText)
     }
 };
