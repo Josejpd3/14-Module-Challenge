@@ -15,4 +15,4 @@ const post = async function (e) {
     }
 };
 
-document.querySelector('#postForm').addEventListener("click", post);
+document.querySelector('#postBtn').addEventListener("click", post);
