@@ -14,3 +14,5 @@ const post = async function (e) {
         document.location = "/dashboard";
     }
 };
+
+document.querySelector('#postForm').addEventListener("click", post);
