@@ -10,5 +10,7 @@ const post = async function (e) {
             body: JSON.stringify({title, content}),
             headers: {'Content-Type': 'application/json'}
         });
+        // redirect to dashboard after clicking post
+        document.location = "/dashboard";
     }
 };
