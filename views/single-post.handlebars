@@ -1,0 +1,38 @@
+<div class="uk-container uk-margin uk-container-expand uk-background-primary">
+    <div class="uk-card uk-margin uk-margin-top uk-margin-bottom uk-card-body uk-background-secondary">
+        <div class="post-header">
+            <h2 class="uk-text-primary">
+            {{title}}
+            </h2>
+        </div>
+        <div class="content">
+            <p class="whiteText">
+            {{content}}
+            </p>
+        </div>
+        <p>Created by {{user.username}} on {{format_date date_created}}</p>
+    </div> 
+
+
+    <form id="commentForm">
+        <legend class="uk-legend whiteText">Comments</legend>
+        <input class="uk-textarea" id="text" rows="3" placeholder="Enter Comment" aria-label="Textarea"></input>
+        <button class="uk-button uk-button-secondary uk-button-large" id="postBtn">Comment</button>
+    </form>
+
+
+    {{#each comments as |comment| }}
+        <div class="uk-card uk-margin uk-margin-top uk-margin-bottom uk-card-body uk-background-secondary">
+            <div class="content">
+                <h3 class="whiteText">{{comment.user.username}} <p class="uk-text-muted">{{format_date comment.date_created}}</p></h3>
+                <p>
+                {{post.content}}
+                </p>
+            </div>
+            <p>Posted on {{format_date post.date_created}}</p>
+        </div>
+    {{/each}} 
+</div>
+
+
+<script src="/js/comment.js"></script>
